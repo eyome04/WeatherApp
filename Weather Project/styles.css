@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 400px;
+    margin: 150px auto;
+    text-align: center; /* Center the text inside the container */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.4s ease-in-out;
+}
+
+.weather-info {
+    margin-top: 20px;
+    color: #333;
+    opacity: 0; /* Start hidden until data is loaded */
+    transition: opacity 0.3s ease;
+    text-align: center; /* Center the text in the weather info section */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center align items horizontally */
+}
+
+.weather-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text and icon in the paragraph */
+    font-size: 1rem;
+}
+
+.icon {
+    width: 150px; /* Adjust icon size */
+    height: 150px; /* Optional: control icon height */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #007BFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+    display: none; /* hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: none; /* hidden by default */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #007BFF;
+    margin: 1; /* Remove default margin for better alignment */
+}
+
+p3 {
+    font-size: 1rem;
+    margin: 1; 
+}
+
+
+
+#location {
+    font-size: 2rem; 
+    color: #007BFF;  
+    margin-bottom: 10px; 
+}
+
+#temperature {
+    font-size: 1.8rem; 
+    color: #333;       
+    margin: 5px 0;   
+}
+
+#description {
+    font-size: 1.5rem;
+    color: #333;       
+    margin: 5px 0;   
+}
+
+#humidity, #wind {
+    font-size: 1.2rem; 
+    color: #333;       
+    margin: 5px 0;   
+}
+
+.weather-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size: 1rem; 
+}
+
+.icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 8px; 
+}
